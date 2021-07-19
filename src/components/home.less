@@ -9,7 +9,37 @@
   .home-content {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
+    width: 60%;
+    justify-items: flex-start;
+    .datepicker-comp {
+      height: 38px;
+      width: 250px;
+      border-radius: 5px;
+      padding-left: 12px;
+      border: 1px solid #cccccc;
+    }
+  }
+  .btn-container {
+    margin-top: 30px;
+    .save-btn {
+      background-color: green;
+      color: #ffff;
+      padding: 15px 30px;
+      border: 1px solid green;
+      margin-right: 15px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .cancel-btn {
+      .save-btn();
+      background-color: #bebebe;
+      border: 1px solid #bebebe;
+    }
+  }
+  .table-container {
+    margin-top: 40px;
   }
 }

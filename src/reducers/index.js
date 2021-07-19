@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 
-import userDetails from './UserDetailsReducer';
+import createOrder from './CreateOrderReducer';
+import getItemDetails from './ItemDetailsReducer';
 
 export default combineReducers({
-  userDetails,
+  createOrder,
+  getItemDetails,
 });

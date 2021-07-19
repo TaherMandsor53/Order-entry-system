@@ -1,31 +1,23 @@
-import express from 'express';
-import cors from 'cors';
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-const router = express.Router();
-import DataMessage from './models/data.js';
+const express = require('express');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+const route = require('./routes/routes.js');
 
 const app = express();
 
+app.use(express.json({ limit: '30mb', extended: true }));
+app.use(express.urlencoded({ limit: '30mb', extended: true }));
 dotenv.config();
 
 app.use(cors());
 
-app.use('/', router);
+app.use('/', route);
 
 app.get('/', (req, res) => {
-  res.send('Hello to Memories Post');
+  res.send('Hello to order entry system');
 });
 
-router.route('/insertdata').post(function (req, res) {
-  DataMessage.insertMany([{ name: 'Taher' }, { surname: 'Mandosarwala' }, { age: 5 }], function (err, result) {
-    if (err) {
-      res.send(err);
-    } else {
-      res.send(result);
-    }
-  });
-});
 const PORT = process.env.PORT || 5000;
 
 mongoose

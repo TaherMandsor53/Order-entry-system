@@ -1,28 +1,28 @@
 import React, { Fragment } from 'react';
-import { Modal, ModalActions, Button } from 'semantic-ui-react';
 
-class MessageComponent extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {};
-	}
+export default function MessageComponent({ modalOpen, modalHeader, popupMsg, closeModal }) {
+  const resetModal = () => {
+    closeModal();
+  };
 
-	render() {
-		const { modalOpen, modalHeader, modalContent, onClose } = this.props;
-		return (
-			<Fragment>
-				<Modal size="small" open={modalOpen}>
-					<Modal.Header>{modalHeader}</Modal.Header>
-					<Modal.Content>
-						<p>{modalContent}</p>
-					</Modal.Content>
-					<ModalActions>
-						<Button content="OK" icon="checkmark" labelPosition="right" positive onClick={onClose} />
-					</ModalActions>
-				</Modal>
-			</Fragment>
-		);
-	}
+  return (
+    modalOpen && (
+      <div className={modalOpen ? 'message-modal active' : 'message-modal'}>
+        <div className="message-modal-main popup-main">
+          <div className="message-header-part">
+            <div className="message-modal-header popup-header">{modalHeader}</div>
+          </div>
+
+          <div className="message-modal-content popup-content">
+            <div className="popup-content-text">{popupMsg}</div>
+            <div className="popup-btn">
+              <button className="message-btn" type="button" onClick={resetModal}>
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  );
 }
-
-export default MessageComponent;
