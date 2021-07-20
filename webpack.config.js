@@ -2,7 +2,7 @@ const path = require('path');
 module.exports = {
   entry: './main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './public'),
     filename: 'bundle.js',
   },
 
@@ -58,7 +58,7 @@ module.exports = {
     host: 'localhost',
     historyApiFallback: true,
     disableHostCheck: true,
-    contentBase: './dist',
+    contentBase: './public',
   },
   optimization: {
     minimize: false,
