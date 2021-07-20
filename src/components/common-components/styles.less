@@ -1,0 +1,162 @@
+.datatable {
+  margin-top: 20px;
+  overflow-y: scroll;
+  max-height: 521px;
+  border: 1px solid #bebebe;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #bebebe;
+  }
+
+  th {
+    color: #755139ff !important;
+    font-size: 15px;
+  }
+  th,
+  td {
+    border-bottom: 1px solid #bebebe !important;
+    border-right: 1px solid #bebebe !important;
+  }
+  td {
+    font-size: 14px;
+  }
+  table.ui.celled.table {
+    border-radius: 0px;
+  }
+}
+.ui.table {
+  border: none !important;
+}
+
+figure {
+  margin: 30px;
+}
+
+.input-comp {
+  width: 250px;
+  .MuiOutlinedInput-input {
+    padding: 10px;
+  }
+  .MuiOutlinedInput-root {
+    height: 45px;
+  }
+  .MuiInputLabel-outlined {
+    transform: translate(14px, 16px) scale(1);
+  }
+}
+
+.message-modal {
+  &.active {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    align-items: center;
+    top: 0px !important;
+    left: 0px !important;
+    z-index: 999;
+  }
+  .message-modal-main {
+    padding: 20px;
+    margin: 1rem auto;
+    width: auto;
+    height: auto;
+    text-align: left;
+    background: #fff;
+    border: none;
+    box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, 0.2), 1px 3px 15px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    .message-header-part {
+      display: flex;
+      .message-modal-header {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 48px;
+        color: #091133;
+      }
+      .message-close-container {
+        width: 100%;
+        text-align: end;
+        .close-icon {
+          cursor: pointer;
+        }
+      }
+      .popup-header {
+        font-size: 28px;
+      }
+    }
+    .message-modal-content {
+      font-size: 20px;
+      line-height: 23px;
+      .input-details {
+        font-weight: normal;
+        color: #3f3d56;
+        margin: 20px 0px 10px 0px;
+      }
+      .message-btn {
+        color: #ffff;
+        background: green;
+        border-radius: 5px;
+        padding: 8px 35px;
+        width: auto;
+        height: auto;
+        margin-top: 30px;
+        border: 1px solid green;
+        cursor: pointer;
+      }
+    }
+    .popup-content {
+      font-size: 18px;
+      .popup-content-text {
+        margin-top: 10px;
+      }
+      .popup-btn {
+        text-align: end;
+      }
+    }
+  }
+  .popup-main {
+    min-width: 410px;
+  }
+}
+
+.table-container {
+  .MuiTableHead-root {
+    background: #cccccc;
+    color: #1c1c1c;
+  }
+}
+
+.download-excel-main {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  .download-excel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 120px;
+    background: #eeeeee;
+    border: 1px solid #bebebe;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    .download-icon {
+      height: 22px;
+      width: 22px;
+    }
+    .download-text {
+      padding-left: 5px;
+      color: #1c1c1c;
+    }
+  }
+}
