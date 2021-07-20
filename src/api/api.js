@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = `http://localhost:5000/api`;
+const baseURL = `https://order-entry-system.vercel.app/api`;
 
 const createOrderDetails = (
   orderId,
