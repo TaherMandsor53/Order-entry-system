@@ -14,7 +14,9 @@ export default function MessageComponent({ modalOpen, modalHeader, popupMsg, clo
           </div>
 
           <div className="message-modal-content popup-content">
-            <div className="popup-content-text">{popupMsg}</div>
+            <div className="popup-content-text">
+              <span dangerouslySetInnerHTML={{ __html: popupMsg }} />
+            </div>
             <div className="popup-btn">
               <button className="message-btn" type="button" onClick={resetModal}>
                 OK

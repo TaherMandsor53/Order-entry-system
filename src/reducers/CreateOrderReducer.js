@@ -4,6 +4,8 @@ const initialState = {
   isFetching: false,
   createOrderDetails: [],
   getOrderDetails: [],
+  deleteOrderList: [],
+  updateOrderList: [],
 };
 
 export default function createOrder(state = initialState, action) {
@@ -24,6 +26,24 @@ export default function createOrder(state = initialState, action) {
       return { isFetching: false, getOrderDetails: action.getOrderDetails };
 
     case types.GET_ORDER_DETAILS_ERROR:
+      return { ...state, isFetching: false, error: action.message };
+
+    case types.DELETE_ORDER_DETAILS_REQUEST:
+      return { ...state, isFetching: true };
+
+    case types.DELETE_ORDER_DETAILS_SUCCESS:
+      return { isFetching: false, deleteOrderList: action.deleteOrderList };
+
+    case types.DELETE_ORDER_DETAILS_ERROR:
+      return { ...state, isFetching: false, error: action.message };
+
+    case types.UPDATE_ORDER_DETAILS_REQUEST:
+      return { ...state, isFetching: true };
+
+    case types.UPDATE_ORDER_DETAILS_SUCCESS:
+      return { isFetching: false, updateOrderList: action.updateOrderList };
+
+    case types.UPDATE_ORDER_DETAILS_ERROR:
       return { ...state, isFetching: false, error: action.message };
 
     default:

@@ -6,7 +6,6 @@ export default function DropdownComponent(props) {
   const useStyles = makeStyles(theme => ({
     formControl: {
       width: '250px',
-      // margin: theme.spacing(1),
       minWidth: 120,
     },
     selectEmpty: {

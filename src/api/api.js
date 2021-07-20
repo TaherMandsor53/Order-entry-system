@@ -41,8 +41,20 @@ const getOrderDetails = () => {
   return axios.get(URL);
 };
 
+const deleteOrderDetails = deleteId => {
+  const URL = `${baseURL}/orderDelete/${deleteId}`;
+  return axios.delete(URL);
+};
+
+const updateOrderDetails = (editId, payload) => {
+  const URL = `${baseURL}/orderUpdate/${editId}`;
+  return axios.put(URL, { payload });
+};
+
 export default {
   createOrderDetails,
   getItemDetails,
   getOrderDetails,
+  deleteOrderDetails,
+  updateOrderDetails,
 };

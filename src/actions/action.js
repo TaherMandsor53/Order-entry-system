@@ -40,3 +40,18 @@ export function getOrderDetails() {
     type: types.GET_ORDER_DETAILS_REQUEST,
   };
 }
+
+export function deleteOrderDetails(deleteId) {
+  return {
+    type: types.DELETE_ORDER_DETAILS_REQUEST,
+    deleteId,
+  };
+}
+
+export function updateOrderDetails(editId, payload) {
+  return {
+    type: types.UPDATE_ORDER_DETAILS_REQUEST,
+    editId,
+    payload,
+  };
+}
